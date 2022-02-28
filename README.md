@@ -41,3 +41,19 @@ download_ftp_file(file_remote = "ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/
 
 ```
 
+### To create the python execution environment with conda
+
+```bash
+cd genetic_algorithm
+conda create -n drugmap_ga python=3.7
+conda activate drugmap_ga
+conda install conda-build
+conda install -c conda-forge numpy scipy pandas matplotlib deap python-igraph
+conda develop .
+```
+
+To execute the GA
+```bash
+python main.py
+```
+
